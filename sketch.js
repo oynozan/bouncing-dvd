@@ -1,23 +1,23 @@
-//Sizes of Logo
+//Sizes of the Logo
 const DVDheight = Math.floor(371 / 12) * 4,
         DVDwidth = 200;
 
-//Position of logo
+//Position of the logo
 let x, y;
 
-//Declaring velocity of logo
+//Declaring velocity of the logo
 let stepX = 0, stepY = 0;
 
 //Declaring random start points for logo
 let startX = Math.floor(Math.random() * 200);
 let startY = Math.floor(Math.random() * 200);
 
-//Variables for detect direction of logo
+//Variables for detecting the direction of logo
 let horizontalRight = true, verticalBottom = true;
 //Previous directions
 let preHorizon, preVertical;
 
-//Different colors of logo
+//Different colors of the logo
 let dvd_white;
 let dvd_yellow;
 let dvd_red;
@@ -38,8 +38,7 @@ function preload() {
 
 function setup() {
     createCanvas(500, 500);
-    dvdImg = dvd_white; //First color of logo
-  
+    dvdImg = dvd_white; //First color of the logo
 }
 
 function draw() {
@@ -52,10 +51,10 @@ function draw() {
     x = startX + stepX;
     y = startY + stepY;
   
-    //Checking for collisions
+    //Checking for the collisions
     collisionsCheck(x, y, DVDwidth, DVDheight);
   
-    //Changing logo direions with changin velocity
+    //Changing logo directions
     horizontalRight ? stepX++ : stepX--;
     verticalBottom ? stepY++ : stepY--;
   
